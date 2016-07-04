@@ -12,7 +12,10 @@ import org.cyclops.cyclopscore.config.extendedconfig.ItemConfigReference;
 import org.cyclops.cyclopscore.init.ItemCreativeTab;
 import org.cyclops.cyclopscore.init.ModBaseVersionable;
 import org.cyclops.cyclopscore.init.RecipeHandler;
+import org.cyclops.cyclopscore.modcompat.ModCompatLoader;
 import org.cyclops.cyclopscore.proxy.ICommonProxy;
+import org.cyclops.energysynergy.modcompat.ic2.capability.Ic2ModCompat;
+import org.cyclops.energysynergy.modcompat.rf.RfApiCompat;
 
 /**
  * The main mod class of this mod.
@@ -49,6 +52,13 @@ public class EnergySynergy extends ModBaseVersionable {
     @Override
     protected RecipeHandler constructRecipeHandler() {
         return new RecipeHandler(this);
+    }
+
+    @Override
+    protected void loadModCompats(ModCompatLoader modCompatLoader) {
+        super.loadModCompats(modCompatLoader);
+        modCompatLoader.addApiCompat(new RfApiCompat());
+        modCompatLoader.addModCompat(new Ic2ModCompat());
     }
 
     /**
