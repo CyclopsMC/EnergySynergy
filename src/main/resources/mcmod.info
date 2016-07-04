@@ -1,0 +1,17 @@
+[
+{
+  "modid": "energysynergy",
+  "name": "EnergySynergy",
+  "description": "Transparent conversion of energy",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "logoFile": "assets/energysynergy/textures/logo.png",
+  "url": "https://github.com/CyclopsMC/EnergySynergy",
+  "updateUrl": "todo",
+  "authorList": [ "rubensworks (aka kroeserr)" ],
+  "credits": "rubensworks (aka kroeserr)",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
