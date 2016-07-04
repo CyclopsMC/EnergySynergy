@@ -21,7 +21,7 @@ deploy:
   - provider: releases
     skip_cleanup: true
     api_key:
-      secure: TODO
+      secure: eg8c0AXVdD4A50y4iMMT5BeQgQWrLe/7khsURPeVOeDJFx8AnhP57wUnFB1qqIeHLWaKHwMoXo0daVyzL5HJ+3hTRBiEZ1y2TnFTgDwkoAYDoesBwpRVEMe5EWEmpaUAREVm8r21k40NO48isjSrO34NR1QjvX0qU0ZnnYmu4Bq/jNxzs6iGj243Qh1St3rseah6MHY3601jtYU0+w6Kbi2E9VeraGD+XQ5IpFWSEXtdinl1G7xJkQ0ZUWRoRJ60wuSOsmLlh2bUPFXqH9lwQCEeZ8QZJYHf0n8qPmJxnz4n/vcw2eAKUZBRVjYJgpCmBoSGMk30pp4oLrM0dWX3pElhVKjqjdGZUl2vJdCBgKDLsbNWKZ7WGnkfWCHZ/OAxOoFz0FSx0f/uopIwQkd9Bc6pU++zCu80eT3ga84iAeda0aSdgrfP2nmkumixg3vELejHMYSGwRlsPviFqNy0mR2y7h1fHEatEFWIrkfe9f/sdjGNUWgAwz7cn8f522B8Ebs7C2sSp8ViUDbsHHeWwNyO48ihwjao9B/YR7i2zGQAmaaEUzfeIwv2L74bH7agFHf4nMFMurz5YPAJl71VTlSrA3wUfq6SpiDzBvVNpahG85LLp+7BPi8J4u1JiEIipwCq7XosCLQO1+u3eLWg+cwKmNk6o0hbx9ysdW3kb4I=
     on:
       all_branches: true
       repo: CyclopsMC/EnergySynergy
