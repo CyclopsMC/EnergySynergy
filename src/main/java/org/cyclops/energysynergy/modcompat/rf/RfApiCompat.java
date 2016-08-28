@@ -1,6 +1,6 @@
 package org.cyclops.energysynergy.modcompat.rf;
 
-import net.minecraftforge.fml.common.ModAPIManager;
+import net.minecraftforge.fml.common.Loader;
 import org.cyclops.cyclopscore.modcompat.IApiCompat;
 import org.cyclops.energysynergy.Reference;
 import org.cyclops.energysynergy.modcompat.rf.capability.tesla.RfTeslaIntegration;
@@ -14,7 +14,7 @@ public class RfApiCompat implements IApiCompat {
 
 	@Override
 	public void onInit(final Step initStep) {
-		if(initStep == Step.PREINIT && ModAPIManager.INSTANCE.hasAPI(Reference.MOD_TESLA_API)) {
+		if(initStep == Step.PREINIT && Loader.isModLoaded(Reference.MOD_TESLA)) {
 			RfTeslaIntegration.load();
 		}
 	}

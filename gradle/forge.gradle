@@ -26,7 +26,7 @@ dependencies {
         compile "org.cyclops.cyclopscore:CyclopsCore:${config.minecraft_version}-${config.cyclopscore_version}:deobf"
     }
 
-    deobfCompile "net.darkhax.tesla:Tesla:${config.minecraft_version}-${config.teslaapi_version}" // http://maven.epoxide.xyz/net/darkhax/tesla/Tesla/
+    deobfCompile "net.darkhax.tesla:Tesla:1.10.2-${config.teslaapi_version}" // http://maven.epoxide.xyz/net/darkhax/tesla/Tesla/
     deobfCompile "net.bdew.thirdparty:rfapi:${config.rfapi_version}-mc1.8.9:api" // http://jenkins.bdew.net/maven/net/bdew/thirdparty/rfapi/
     deobfCompile "net.industrial-craft:industrialcraft-2:${config.IC2_version}:dev" // http://maven.ic2.player.to/
 
