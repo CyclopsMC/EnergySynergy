@@ -16,4 +16,12 @@ public class Ic2Helpers {
         return (long) Math.floor(eu * GeneralConfig.euToTeslaRate);
     }
 
+    public static double feToEu(int fe) {
+        return fe / GeneralConfig.euToTeslaRate;
+    }
+
+    public static int euToFe(double eu) {
+        return (int) Math.floor(eu * GeneralConfig.euToTeslaRate);
+    }
+
 }

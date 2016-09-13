@@ -7,6 +7,8 @@ import net.darkhax.tesla.capability.TeslaCapabilities;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.energy.CapabilityEnergy;
+import net.minecraftforge.energy.IEnergyStorage;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -29,11 +31,20 @@ public class TestCapabilityItemMod {
         if (event.getWorld().getBlockState(event.getPos()).getBlock() != Blocks.STONE) return;
 
         ItemStack itemStack = event.getItemStack();
-        if (itemStack != null && itemStack.hasCapability(TeslaCapabilities.CAPABILITY_HOLDER, null)) {
-            event.setCanceled(true);
-            ITeslaHolder holder = itemStack.getCapability(TeslaCapabilities.CAPABILITY_HOLDER, null);
-            System.out.println("Stored: " + holder.getStoredPower());
-            System.out.println("Capacity: " + holder.getCapacity());
+        if (itemStack != null) {
+            if (event.getEntityPlayer().isSneaking() && itemStack.hasCapability(TeslaCapabilities.CAPABILITY_HOLDER, null)) {
+                event.setCanceled(true);
+                ITeslaHolder holder = itemStack.getCapability(TeslaCapabilities.CAPABILITY_HOLDER, null);
+                System.out.println("---Tesla---");
+                System.out.println("Stored: " + holder.getStoredPower());
+                System.out.println("Capacity: " + holder.getCapacity());
+            } else if (itemStack.hasCapability(CapabilityEnergy.ENERGY, null)) {
+                event.setCanceled(true);
+                IEnergyStorage holder = itemStack.getCapability(CapabilityEnergy.ENERGY, null);
+                System.out.println("---Forge Energy---");
+                System.out.println("Stored: " + holder.getEnergyStored());
+                System.out.println("Capacity: " + holder.getMaxEnergyStored());
+            }
         }
     }
 
@@ -42,10 +53,18 @@ public class TestCapabilityItemMod {
         if (event.getWorld().getBlockState(event.getPos()).getBlock() != Blocks.OBSIDIAN) return;
 
         ItemStack itemStack = event.getItemStack();
-        if (itemStack != null && itemStack.hasCapability(TeslaCapabilities.CAPABILITY_PRODUCER, null)) {
-            event.setCanceled(true);
-            ITeslaProducer producer = itemStack.getCapability(TeslaCapabilities.CAPABILITY_PRODUCER, null);
-            System.out.println("Take 1000: " + producer.takePower(1000, false));
+        if (itemStack != null) {
+            if (event.getEntityPlayer().isSneaking() && itemStack.hasCapability(TeslaCapabilities.CAPABILITY_PRODUCER, null)) {
+                event.setCanceled(true);
+                ITeslaProducer producer = itemStack.getCapability(TeslaCapabilities.CAPABILITY_PRODUCER, null);
+                System.out.println("---Tesla---");
+                System.out.println("Take 1000: " + producer.takePower(1000, false));
+            } else if (itemStack.hasCapability(CapabilityEnergy.ENERGY, null)) {
+                event.setCanceled(true);
+                IEnergyStorage holder = itemStack.getCapability(CapabilityEnergy.ENERGY, null);
+                System.out.println("---Forge Energy---");
+                System.out.println("Take 1000: " + holder.extractEnergy(1000, false));
+            }
         }
     }
 
@@ -54,10 +73,18 @@ public class TestCapabilityItemMod {
         if (event.getWorld().getBlockState(event.getPos()).getBlock() != Blocks.DIAMOND_BLOCK) return;
 
         ItemStack itemStack = event.getItemStack();
-        if (itemStack != null && itemStack.hasCapability(TeslaCapabilities.CAPABILITY_CONSUMER, null)) {
-            event.setCanceled(true);
-            ITeslaConsumer consumer = itemStack.getCapability(TeslaCapabilities.CAPABILITY_CONSUMER, null);
-            System.out.println("Give 1000: " + consumer.givePower(1000, false));
+        if (itemStack != null) {
+            if (event.getEntityPlayer().isSneaking() && itemStack.hasCapability(TeslaCapabilities.CAPABILITY_CONSUMER, null)) {
+                event.setCanceled(true);
+                ITeslaConsumer consumer = itemStack.getCapability(TeslaCapabilities.CAPABILITY_CONSUMER, null);
+                System.out.println("---Tesla---");
+                System.out.println("Give 1000: " + consumer.givePower(1000, false));
+            } else if (itemStack.hasCapability(CapabilityEnergy.ENERGY, null)) {
+                event.setCanceled(true);
+                IEnergyStorage holder = itemStack.getCapability(CapabilityEnergy.ENERGY, null);
+                System.out.println("---Forge Energy---");
+                System.out.println("Give 1000: " + holder.receiveEnergy(1000, false));
+            }
         }
     }
 }
