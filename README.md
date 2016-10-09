@@ -1,6 +1,6 @@
 ## EnergySynergy
 
-[![Build Status](https://travis-ci.org/CyclopsMC/EnergySynergy.svg?branch=master-1.8)](https://travis-ci.org/CyclopsMC/EnergySynergy)
+[![Build Status](https://travis-ci.org/CyclopsMC/EnergySynergy.svg?branch=master-1.10)](https://travis-ci.org/CyclopsMC/EnergySynergy)
 
 Transparent conversion of energy.
 
