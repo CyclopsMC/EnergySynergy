@@ -1,16 +1,18 @@
 package org.cyclops.energysynergy.modcompat.ic2.capability.forgeenergy;
 
+import ic2.api.energy.tile.IEnergySink;
+import ic2.api.energy.tile.IEnergySource;
 import ic2.api.item.IElectricItem;
 import ic2.api.tile.IEnergyStorage;
 import ic2.core.block.TileEntityBlock;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.energy.CapabilityEnergy;
-import org.cyclops.cyclopscore.modcompat.capabilities.CapabilityConstructorRegistry;
-import org.cyclops.cyclopscore.modcompat.capabilities.DefaultCapabilityProvider;
-import org.cyclops.cyclopscore.modcompat.capabilities.ICapabilityConstructor;
-import org.cyclops.cyclopscore.modcompat.capabilities.SimpleCapabilityConstructor;
+import org.apache.commons.lang3.tuple.Pair;
+import org.cyclops.cyclopscore.datastructure.EnumFacingMap;
+import org.cyclops.cyclopscore.modcompat.capabilities.*;
 import org.cyclops.energysynergy.EnergySynergy;
 
 import javax.annotation.Nullable;
@@ -37,6 +39,40 @@ public class Ic2ForgeEnergyIntegration {
                     public ICapabilityProvider createProvider(IEnergyStorage host) {
                         return new DefaultCapabilityProvider<>(getCapability(),
                                 new EnergyStorageEnergyStorage(host));
+                    }
+                });
+        registry.registerInheritableTile(IEnergySink.class,
+                new SimpleCapabilityConstructor<net.minecraftforge.energy.IEnergyStorage, IEnergySink>() {
+                    @Override
+                    public Capability<net.minecraftforge.energy.IEnergyStorage> getCapability() {
+                        return CapabilityEnergy.ENERGY;
+                    }
+
+                    @Nullable
+                    @Override
+                    public ICapabilityProvider createProvider(IEnergySink host) {
+                        return new DefaultSidedCapabilityProvider<>(EnumFacingMap.forAllValues(
+                                Pair.of(getCapability(), (net.minecraftforge.energy.IEnergyStorage) new EnergyStorageEnergySink(EnumFacing.DOWN, host)),
+                                Pair.of(getCapability(), (net.minecraftforge.energy.IEnergyStorage) new EnergyStorageEnergySink(EnumFacing.UP, host)),
+                                Pair.of(getCapability(), (net.minecraftforge.energy.IEnergyStorage) new EnergyStorageEnergySink(EnumFacing.NORTH, host)),
+                                Pair.of(getCapability(), (net.minecraftforge.energy.IEnergyStorage) new EnergyStorageEnergySink(EnumFacing.SOUTH, host)),
+                                Pair.of(getCapability(), (net.minecraftforge.energy.IEnergyStorage) new EnergyStorageEnergySink(EnumFacing.WEST, host)),
+                                Pair.of(getCapability(), (net.minecraftforge.energy.IEnergyStorage) new EnergyStorageEnergySink(EnumFacing.EAST, host))
+                        ));
+                    }
+                });
+        registry.registerInheritableTile(IEnergySource.class,
+                new SimpleCapabilityConstructor<net.minecraftforge.energy.IEnergyStorage, IEnergySource>() {
+                    @Override
+                    public Capability<net.minecraftforge.energy.IEnergyStorage> getCapability() {
+                        return CapabilityEnergy.ENERGY;
+                    }
+
+                    @Nullable
+                    @Override
+                    public ICapabilityProvider createProvider(IEnergySource host) {
+                        return new DefaultCapabilityProvider<>(getCapability(),
+                                new EnergyStorageEnergySource(host));
                     }
                 });
         registry.registerInheritableTile(TileEntityBlock.class,
