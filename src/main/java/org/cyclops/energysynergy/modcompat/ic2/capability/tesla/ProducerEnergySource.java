@@ -22,7 +22,6 @@ public class ProducerEnergySource implements ITeslaProducer {
         double toTake = Math.min(eu, host.getOfferedEnergy());
         if (!simulated) {
             host.drawEnergy(toTake);
-            return Ic2Helpers.euToTesla(toTake);
         }
         return Ic2Helpers.euToTesla(toTake);
     }

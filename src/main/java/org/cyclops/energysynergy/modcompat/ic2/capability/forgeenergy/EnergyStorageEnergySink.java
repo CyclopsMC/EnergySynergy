@@ -47,7 +47,7 @@ public class EnergyStorageEnergySink implements net.minecraftforge.energy.IEnerg
 
     @Override
     public boolean canExtract() {
-        return false;
+        return true;
     }
 
     @Override
