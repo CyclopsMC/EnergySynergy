@@ -26,14 +26,13 @@ public class EnergyStorageEnergySource implements net.minecraftforge.energy.IEne
         double toTake = Math.min(eu, host.getOfferedEnergy());
         if (!simulate) {
             host.drawEnergy(toTake);
-            return Ic2Helpers.euToFe(toTake);
         }
         return Ic2Helpers.euToFe(toTake);
     }
 
     @Override
     public int getEnergyStored() {
-        return 0;
+        return Ic2Helpers.euToFe(host.getOfferedEnergy());
     }
 
     @Override
@@ -48,6 +47,6 @@ public class EnergyStorageEnergySource implements net.minecraftforge.energy.IEne
 
     @Override
     public boolean canReceive() {
-        return false;
+        return true;
     }
 }
