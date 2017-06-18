@@ -1,6 +1,6 @@
 ## EnergySynergy
 
-[![Build Status](https://travis-ci.org/CyclopsMC/EnergySynergy.svg?branch=master-1.10)](https://travis-ci.org/CyclopsMC/EnergySynergy)
+[![Build Status](https://travis-ci.org/CyclopsMC/EnergySynergy.svg?branch=master-1.11)](https://travis-ci.org/CyclopsMC/EnergySynergy)
 [![Download](https://api.bintray.com/packages/cyclopsmc/dev/EnergySynergy/images/download.svg) ](https://bintray.com/cyclopsmc/dev/EnergySynergy/_latestVersion)
 [![CurseForge](http://cf.way2muchnoise.eu/full_247043_downloads.svg)](http://minecraft.curseforge.com/projects/247043)
 
