@@ -17,9 +17,14 @@ repositories {
         name = "bdew"
         url = "http://jenkins.bdew.net/maven"
     }*/
-    maven {
+    // TODO: temp while player's maven is fixed
+    /*maven {
         name 'Player Maven FS'
         url 'http://maven.ic2.player.to/'
+    }*/
+    maven {
+        name = "CurseForge"
+        url = "https://minecraft.curseforge.com/api/maven/"
     }
 }
 dependencies {
@@ -32,7 +37,9 @@ dependencies {
 
     deobfCompile "net.darkhax.tesla:Tesla:1.11-${config.teslaapi_version}" // http://maven.epoxide.xyz/net/darkhax/tesla/Tesla/
     deobfCompile "net.cyclops.thirdparty:rfapi:${config.rfapi_version}-mc1.11.2:api" // http://jenkins.bdew.net/maven/net/bdew/thirdparty/rfapi/
-    deobfCompile "net.industrial-craft:industrialcraft-2:${config.IC2_version}:dev" // http://maven.ic2.player.to/
+    //deobfCompile "net.industrial-craft:industrialcraft-2:${config.IC2_version}:dev" // http://maven.ic2.player.to/
+    // TODO: temp while player's maven is fixed
+    deobfCompile 'industrial-craft:industrialcraft-2:2.7.59:ex111' // https://minecraft.curseforge.com/api/maven/
 
     // Project lombok
     compile "org.projectlombok:lombok:1.14.4"
