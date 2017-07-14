@@ -1,6 +1,6 @@
 package org.cyclops.energysynergy.modcompat.rf.capability.tesla;
 
-import cofh.api.energy.IEnergyContainerItem;
+import cofh.redstoneflux.api.IEnergyContainerItem;
 import net.darkhax.tesla.api.ITeslaConsumer;
 import net.minecraft.item.ItemStack;
 

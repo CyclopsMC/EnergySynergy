@@ -1,5 +1,5 @@
 language: java
-jdk: openjdk7
+jdk: oraclejdk8
 notifications:
   email: false
   slack:
@@ -17,6 +17,10 @@ cache:
     - '$HOME/.gradle'
 before_cache:
     - rm -f $HOME/.gradle/caches/*/*.lock
+
+branches:
+  except:
+  - /^release-.*$/
 
 deploy:
   - provider: script

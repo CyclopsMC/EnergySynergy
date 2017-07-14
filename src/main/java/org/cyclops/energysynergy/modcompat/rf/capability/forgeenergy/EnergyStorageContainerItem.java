@@ -1,6 +1,6 @@
 package org.cyclops.energysynergy.modcompat.rf.capability.forgeenergy;
 
-import cofh.api.energy.IEnergyContainerItem;
+import cofh.redstoneflux.api.IEnergyContainerItem;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.energy.IEnergyStorage;
 

@@ -68,7 +68,7 @@ public class Ic2TeslaIntegration {
                         ));
                     }
                 });
-        registry.registerInheritableTile(IEnergyStorage.class,
+        registry.registerInheritableTile(IEnergySource.class,
                 new SimpleCapabilityConstructor<ITeslaProducer, IEnergySource>() {
                     @Override
                     public Capability<ITeslaProducer> getCapability() {

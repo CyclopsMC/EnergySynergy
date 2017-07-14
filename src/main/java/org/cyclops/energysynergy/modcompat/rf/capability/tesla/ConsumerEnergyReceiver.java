@@ -1,6 +1,6 @@
 package org.cyclops.energysynergy.modcompat.rf.capability.tesla;
 
-import cofh.api.energy.IEnergyReceiver;
+import cofh.redstoneflux.api.IEnergyReceiver;
 import net.darkhax.tesla.api.ITeslaConsumer;
 import net.minecraft.util.EnumFacing;
 

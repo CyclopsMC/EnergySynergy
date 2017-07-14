@@ -17,7 +17,7 @@ public class Reference {
     public static final String MOD_CHANNEL = MOD_ID;
     public static final String MOD_MC_VERSION = "@MC_VERSION@";
     public static final String GA_TRACKING_ID = "UA-65307010-8";
-    public static final String VERSION_URL = "https://raw.githubusercontent.com/CyclopsMC/Versions/master/1.10/EnergySynergy.txt";
+    public static final String VERSION_URL = "https://raw.githubusercontent.com/CyclopsMC/Versions/master/1.12/EnergySynergy.txt";
     
     // Paths
     public static final String TEXTURE_PATH_GUI = "textures/gui/";
@@ -32,10 +32,10 @@ public class Reference {
     // MOD ID's
     public static final String MOD_FORGE = "forge";
     public static final String MOD_FORGE_VERSION = "@FORGE_VERSION@";
-    public static final String MOD_FORGE_VERSION_MIN = "13.20.0.2282";
+    public static final String MOD_FORGE_VERSION_MIN = "14.21.1.2406";
     public static final String MOD_CYCLOPSCORE = "cyclopscore";
     public static final String MOD_CYCLOPSCORE_VERSION = "@CYCLOPSCORE_VERSION@";
-    public static final String MOD_CYCLOPSCORE_VERSION_MIN = "0.10.6";
+    public static final String MOD_CYCLOPSCORE_VERSION_MIN = "0.10.9";
     public static final String MOD_TESLA = "tesla";
     public static final String MOD_RF_API = "CoFHAPI";
     public static final String MOD_IC2 = "ic2";
