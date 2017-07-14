@@ -5,7 +5,7 @@ import net.darkhax.tesla.api.ITeslaHolder;
 import net.minecraft.util.EnumFacing;
 
 /**
- * Tesla holder wrapper for {@link IEnergyStorage}.
+ * Tesla holder wrapper for {@link IEnergyHandler}.
  * @author rubensworks
  */
 public class HolderEnergyHandler implements ITeslaHolder {
