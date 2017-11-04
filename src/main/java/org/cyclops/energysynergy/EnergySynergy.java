@@ -28,7 +28,8 @@ import org.cyclops.energysynergy.modcompat.rf.RfApiCompat;
         useMetadata = true,
         version = Reference.MOD_VERSION,
         dependencies = Reference.MOD_DEPENDENCIES,
-        guiFactory = "org.cyclops.energysynergy.GuiConfigOverview$ExtendedConfigGuiFactory"
+        guiFactory = "org.cyclops.energysynergy.GuiConfigOverview$ExtendedConfigGuiFactory",
+        certificateFingerprint = Reference.MOD_FINGERPRINT
 )
 public class EnergySynergy extends ModBaseVersionable {
     
