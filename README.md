@@ -1,12 +1,14 @@
 ## EnergySynergy
 
 [![Build Status](https://travis-ci.org/CyclopsMC/EnergySynergy.svg?branch=master-1.11)](https://travis-ci.org/CyclopsMC/EnergySynergy)
-[![Download](https://api.bintray.com/packages/cyclopsmc/dev/EnergySynergy/images/download.svg) ](https://bintray.com/cyclopsmc/dev/EnergySynergy/_latestVersion)
+[![Download](https://img.shields.io/maven-metadata/v/http/cyclopsmc.jfrog.io/cyclopsmc/libs-release/org/cyclops/energysynergy/EnergySynergy/maven-metadata.xml.svg) ](https://cyclopsmc.jfrog.io/cyclopsmc/libs-release/org/cyclops/energysynergy/EnergySynergy/)
 [![CurseForge](http://cf.way2muchnoise.eu/full_247043_downloads.svg)](http://minecraft.curseforge.com/projects/247043)
 
 Transparent conversion of energy.
 
 All stable releases (including deobfuscated builds) can be found on [CurseForge](http://minecraft.curseforge.com/mc-mods/247043/files).
+
+[Development builds](https://cyclopsmc.jfrog.io/cyclopsmc/libs-release/org/cyclops/energysynergy/EnergySynergy/) are hosted by [JFrog Artifactory](https://www.jfrog.com/artifactory/).
 
 ### Contributing
 * Before submitting a pull request containing a new feature, please discuss this first with one of the lead developers.
